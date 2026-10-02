@@ -13,8 +13,7 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "bradlc.vscode-tailwindcss",
-        "amazonwebservices.aws-toolkit-vscode",
-        "hostinger-official.hostinger-connector"
+        "amazonwebservices.aws-toolkit-vscode"
       ]
     }
   },
