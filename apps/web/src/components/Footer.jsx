@@ -25,7 +25,7 @@ const Footer = () => {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild className="hover:bg-accent hover:text-accent-foreground rounded-full">
-                <a href="https://www.linkedin.com/in/jason-pelloni-63609b9/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (Placeholder)">
+                <a href="https://www.linkedin.com/in/jason-pelloni-63609b9/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-4 w-4" />
                 </a>
               </Button>
@@ -39,7 +39,7 @@ const Footer = () => {
               <Link to="/" className="text-sm hover:text-primary transition-colors">Home</Link>
               <Link to="/about" className="text-sm hover:text-primary transition-colors">About</Link>
               <Link to="/skills" className="text-sm hover:text-primary transition-colors">Skills</Link>
-              <Link to="/philosophy" className="text-sm hover:text-primary transition-colors">Philosophy</Link>
+              <Link to="/engineering-philosophy" className="text-sm hover:text-primary transition-colors">Philosophy</Link>
               <Link to="/projects" className="text-sm hover:text-primary transition-colors">Projects</Link>
               <Link to="/work-with-me" className="text-sm hover:text-primary transition-colors">Work With Me</Link>
             </nav>

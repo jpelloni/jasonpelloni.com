@@ -55,7 +55,7 @@ const Header = () => {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild aria-label="LinkedIn">
-                <a href="https://www.linkedin.com/in/jason-pelloni-63609b9/" target="_blank" rel="noopener noreferrer" title="Add LinkedIn URL here">
+                <a href="https://www.linkedin.com/in/jason-pelloni-63609b9/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-4 w-4" />
                 </a>
               </Button>
