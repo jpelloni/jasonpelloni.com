@@ -2,7 +2,8 @@
   "name": "jasonpelloni.com",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bullseye",
   "features": {
-    "ghcr.io/devcontainers/features/aws-cli:1": {}
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
   },
   "postCreateCommand": "npm install",
   "forwardPorts": [3000],
