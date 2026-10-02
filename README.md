@@ -12,6 +12,29 @@ npm start        # preview the production build
 npm run lint
 ```
 
+`npm start` serves the last `npm run build` output at http://localhost:3000.
+Stop either server with Ctrl+C.
+
+### Testing locally
+
+The site is a single-page app: every page URL returns the same `index.html`, and React Router (`apps/web/src/App.jsx`) renders the page from the URL. In production, the CloudFront Function in `infra/site.yaml` does the "return `index.html`" part.
+
+- **While editing:** use `npm run dev`. Changes under `apps/web/src/` appear on save.
+- **Before merging:** run `npm run build && npm start` to check the exact files that get deployed.
+
+Checks, in either mode:
+
+1. Click through every page in the nav.
+2. Type a page URL directly, e.g. `localhost:3000/skills`, then refresh. Deep links are the part SPAs most often get wrong on new hosting.
+3. Open the résumé PDF link.
+4. In DevTools (F12):
+   - **Console tab:** no red errors.
+   - **Network tab:** no failed requests.
+   - Device toolbar (Ctrl+Shift+M): check the mobile layout.
+5. Run `npm run lint`. It catches undefined variables and broken imports; there are no automated tests.
+
+After a deploy, repeat steps 1–4 on the CloudFront URL.
+
 ## Infrastructure
 
 `infra/site.yaml` (CloudFormation, **us-east-1**) creates:
