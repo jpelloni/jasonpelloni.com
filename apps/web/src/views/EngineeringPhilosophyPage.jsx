@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { 
   Settings, 
@@ -86,13 +87,6 @@ const EngineeringPhilosophyPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Engineering Philosophy - Jason Pelloni</title>
-        <meta 
-          name="description" 
-          content="Jason Pelloni's core engineering principles: building systems that scale, endure, and empower teams through operational excellence and pragmatic cloud-native design." 
-        />
-      </Helmet>
 
       <div className="min-h-screen flex flex-col">
         <Header />

@@ -5,10 +5,6 @@
 			"project": []
 		},
 		"apps/web": {
-			"entry": [
-				"index.html",
-				"eslint.unicode-escapes-formatter.mjs"
-			],
 			"project": [
 				"src/**/*.{js,jsx,css}"
 			],

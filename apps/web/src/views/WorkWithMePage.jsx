@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { 
   Briefcase, 
@@ -69,13 +70,6 @@ const WorkWithMePage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Work With Me - Jason Pelloni</title>
-        <meta 
-          name="description" 
-          content="Explore engagement models, project interests, and availability to collaborate with Jason Pelloni on backend engineering and AWS architecture." 
-        />
-      </Helmet>
 
       <div className="min-h-screen flex flex-col">
         <Header />

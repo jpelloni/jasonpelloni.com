@@ -1,6 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Code2, Cloud, Database, Mail, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header.jsx';
@@ -32,13 +33,6 @@ const HomePage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Jason Pelloni — Senior Backend & Cloud Engineer</title>
-        <meta
-          name="description"
-          content="Senior Backend & Cloud Engineer specializing in AWS serverless architecture, event‑driven systems, microservices, and data pipeline design."
-        />
-      </Helmet>
 
       <div className="min-h-screen flex flex-col">
         <Header />
@@ -104,7 +98,7 @@ const HomePage = () => {
                     size="lg"
                     className="text-base transition-all duration-200 active:scale-95 shadow-lg shadow-primary/20"
                   >
-                    <Link to="/about">
+                    <Link href="/about">
                       View My Experience
                       <ArrowRight className="h-5 w-5 ml-2" />
                     </Link>
@@ -116,7 +110,7 @@ const HomePage = () => {
                     size="lg"
                     className="text-base transition-all duration-200 active:scale-95"
                   >
-                    <Link to="/projects">See Past Projects</Link>
+                    <Link href="/projects">See Past Projects</Link>
                   </Button>
                 </div>
               </motion.div>

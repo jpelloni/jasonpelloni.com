@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { GraduationCap } from 'lucide-react';
 import Header from '@/components/Header.jsx';
@@ -49,13 +50,6 @@ const AboutPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Jason Pelloni — Professional Experience</title>
-        <meta
-          name="description"
-          content="Explore the 15+ year professional history of Jason Pelloni, Senior Backend & Cloud Engineer specializing in AWS architecture, microservices, and data pipeline modernization."
-        />
-      </Helmet>
 
       <div className="min-h-screen flex flex-col">
         <Header />

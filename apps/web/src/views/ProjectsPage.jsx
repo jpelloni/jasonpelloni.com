@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
@@ -95,13 +96,6 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Featured Projects - Jason Pelloni</title>
-        <meta
-          name="description"
-          content="Explore Jason Pelloni's major career projects involving AWS data pipelines, oncology research platforms, and cloud modernization."
-        />
-      </Helmet>
 
       <div className="min-h-screen flex flex-col">
         <Header />

@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import {
   Code2,
@@ -119,13 +120,6 @@ const SkillsPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Technical Expertise & Skills - Jason Pelloni</title>
-        <meta
-          name="description"
-          content="Technical expertise of Jason Pelloni — backend architecture, AWS cloud engineering, microservices, data pipelines, modernization, and team leadership."
-        />
-      </Helmet>
 
       <div className="min-h-screen flex flex-col">
         <Header />

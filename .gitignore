@@ -1,3 +1,7 @@
 node_modules
 dist/
-apps/web/public/llms.txt
+.next/
+apps/web/out/
+.terraform/
+*.tfstate
+*.tfstate.*

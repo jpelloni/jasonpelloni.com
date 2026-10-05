@@ -5,7 +5,7 @@ import globals from 'globals';
 import unicodeEscapePlugin from './eslint.unicode-escapes-plugin.mjs';
 
 export default [
-	{ ignores: ['node_modules/**', 'dist/**', 'build/**', 'vite.config.js'] },
+	{ ignores: ['node_modules/**', 'dist/**', 'build/**', '.next/**', 'out/**', 'next-env.d.ts'] },
 	{
 		files: ['**/*.js', '**/*.jsx'],
 		plugins: { react, 'react-hooks': reactHooks, 'import': importPlugin },
@@ -57,5 +57,5 @@ export default [
 		plugins: { horizons: unicodeEscapePlugin },
 		rules: { 'horizons/no-unicode-escapes-in-jsx': 'warn' },
 	},
-	{ files: ['tools/**/*.js', 'tailwind.config.js'], languageOptions: { globals: globals.node } },
+	{ files: ['tailwind.config.cjs', 'next.config.mjs', 'postcss.config.mjs'], languageOptions: { globals: globals.node } },
 ];
