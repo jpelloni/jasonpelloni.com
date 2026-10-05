@@ -53,7 +53,7 @@ const Header = () => {
           <div className="flex items-center gap-2">
             <div className="hidden sm:flex items-center gap-2 mr-2 border-r pr-4">
               <Button variant="ghost" size="icon" asChild aria-label="Email">
-                <a href="mailto:jpelloni@gmail.com">
+                <a href="mailto:jason@pelloniconsulting.com">
                   <Mail className="h-4 w-4" />
                 </a>
               </Button>
@@ -92,7 +92,7 @@ const Header = () => {
                   ))}
                   <div className="border-t my-4 pt-4 flex gap-4">
                     <Button variant="outline" asChild className="w-full justify-start gap-2">
-                      <a href="mailto:jpelloni@gmail.com">
+                      <a href="mailto:jason@pelloniconsulting.com">
                         <Mail className="h-4 w-4" /> Email Me
                       </a>
                     </Button>

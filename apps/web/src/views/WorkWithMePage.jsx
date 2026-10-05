@@ -279,7 +279,7 @@ const WorkWithMePage = () => {
 
                     <div className="w-full md:w-auto flex flex-col gap-4 shrink-0">
                       <Button asChild size="lg" className="w-full sm:w-auto text-base shadow-lg shadow-primary/20">
-                        <a href="mailto:jpelloni@gmail.com">
+                        <a href="mailto:jason@pelloniconsulting.com">
                           <Mail className="h-5 w-5 mr-2" />
                           Send Email
                         </a>

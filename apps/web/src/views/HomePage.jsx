@@ -73,10 +73,10 @@ const HomePage = () => {
 
                 <div className="flex flex-wrap justify-center gap-6 mb-10 text-muted-foreground">
                   <a
-                    href="mailto:jpelloni@gmail.com"
+                    href="mailto:jason@pelloniconsulting.com"
                     className="flex items-center gap-2 hover:text-primary transition-colors"
                   >
-                    <Mail className="h-5 w-5" /> jpelloni@gmail.com
+                    <Mail className="h-5 w-5" /> jason@pelloniconsulting.com
                   </a>
                   <a
                     href="tel:+18133689415"
