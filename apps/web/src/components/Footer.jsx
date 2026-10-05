@@ -20,7 +20,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-3 mt-2">
               <Button variant="ghost" size="icon" asChild className="hover:bg-accent hover:text-accent-foreground rounded-full">
-                <a href="mailto:jpelloni@gmail.com" aria-label="Email">
+                <a href="mailto:jason@pelloniconsulting.com" aria-label="Email">
                   <Mail className="h-4 w-4" />
                 </a>
               </Button>
@@ -51,8 +51,8 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-3 text-sm">
                 <Mail className="h-4 w-4 mt-0.5 text-primary" />
-                <a href="mailto:jpelloni@gmail.com" className="hover:text-primary transition-colors">
-                  jpelloni@gmail.com
+                <a href="mailto:jason@pelloniconsulting.com" className="hover:text-primary transition-colors">
+                  jason@pelloniconsulting.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm">
