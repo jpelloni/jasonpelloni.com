@@ -4,10 +4,10 @@ variable "domain_name" {
   description = "Apex domain. www.<domain_name> is also served and redirected to the apex."
 }
 
-variable "github_repo" {
+variable "github_oidc_sub_prefix" {
   type        = string
-  default     = "jpelloni/jasonpelloni.com"
-  description = "owner/repo allowed to assume the deploy role (main branch only)."
+  default     = "repo:jpelloni@11633141/jasonpelloni.com@1402031689"
+  description = "The repo's OIDC subject prefix (gh api repos/OWNER/REPO/actions/oidc/customization/sub -> sub_claim_prefix). This repo uses immutable subjects, which include owner and repo IDs. Only main of this repo may assume the deploy role."
 }
 
 variable "create_github_oidc_provider" {
