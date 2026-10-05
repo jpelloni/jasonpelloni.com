@@ -1,11 +1,14 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, Moon, Sun, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet.jsx';
 
 const Header = () => {
-  const location = useLocation();
+  const pathname = usePathname();
   const [isDark, setIsDark] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,13 +26,13 @@ const Header = () => {
     { path: '/work-with-me', label: 'Work With Me' }
   ];
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => pathname === path;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="text-xl font-bold tracking-tight hover:text-primary transition-colors">
+          <Link href="/" className="text-xl font-bold tracking-tight hover:text-primary transition-colors">
             Jason Pelloni
           </Link>
 
@@ -38,7 +41,7 @@ const Header = () => {
             {navLinks.map((link) => (
               <Link 
                 key={link.path} 
-                to={link.path} 
+                href={link.path} 
                 className={`text-sm font-medium transition-colors hover:text-primary relative ${isActive(link.path) ? 'text-primary' : 'text-muted-foreground'}`}
               >
                 {link.label}
@@ -80,7 +83,7 @@ const Header = () => {
                   {navLinks.map((link) => (
                     <Link 
                       key={link.path} 
-                      to={link.path} 
+                      href={link.path} 
                       onClick={() => setIsOpen(false)} 
                       className={`text-lg font-medium transition-colors hover:text-primary ${isActive(link.path) ? 'text-primary' : 'text-muted-foreground'}`}
                     >

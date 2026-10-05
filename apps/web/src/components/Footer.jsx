@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Mail, Linkedin, Phone, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button.jsx';
 
@@ -11,7 +11,7 @@ const Footer = () => {
           
           {/* Brand & Tagline */}
           <div className="md:col-span-5 flex flex-col gap-4">
-            <Link to="/" className="text-xl font-bold tracking-tight text-foreground hover:text-primary transition-colors inline-block w-fit">
+            <Link href="/" className="text-xl font-bold tracking-tight text-foreground hover:text-primary transition-colors inline-block w-fit">
               Jason Pelloni
             </Link>
             <p className="text-sm font-medium leading-relaxed max-w-sm">
@@ -36,12 +36,12 @@ const Footer = () => {
           <div className="md:col-span-3 flex flex-col gap-4">
             <h3 className="text-sm font-bold uppercase tracking-wider text-foreground">Navigation</h3>
             <nav className="flex flex-col gap-2">
-              <Link to="/" className="text-sm hover:text-primary transition-colors">Home</Link>
-              <Link to="/about" className="text-sm hover:text-primary transition-colors">About</Link>
-              <Link to="/skills" className="text-sm hover:text-primary transition-colors">Skills</Link>
-              <Link to="/engineering-philosophy" className="text-sm hover:text-primary transition-colors">Philosophy</Link>
-              <Link to="/projects" className="text-sm hover:text-primary transition-colors">Projects</Link>
-              <Link to="/work-with-me" className="text-sm hover:text-primary transition-colors">Work With Me</Link>
+              <Link href="/" className="text-sm hover:text-primary transition-colors">Home</Link>
+              <Link href="/about" className="text-sm hover:text-primary transition-colors">About</Link>
+              <Link href="/skills" className="text-sm hover:text-primary transition-colors">Skills</Link>
+              <Link href="/engineering-philosophy" className="text-sm hover:text-primary transition-colors">Philosophy</Link>
+              <Link href="/projects" className="text-sm hover:text-primary transition-colors">Projects</Link>
+              <Link href="/work-with-me" className="text-sm hover:text-primary transition-colors">Work With Me</Link>
             </nav>
           </div>
 
