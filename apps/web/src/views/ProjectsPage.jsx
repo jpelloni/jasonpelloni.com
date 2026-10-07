@@ -5,95 +5,9 @@ import { motion } from 'framer-motion';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import ProjectCard from '@/components/ProjectCard.jsx';
+import projects from '@/data/projects.json';
 
 const ProjectsPage = () => {
-  const projects = [
-    {
-      title: 'AWS Event‑Driven Data Pipeline Architecture',
-      description:
-        'Designed and implemented a fully event‑driven data pipeline supporting high‑volume e‑commerce workflows. Built ingestion, transformation, and delivery stages using AWS RDS, EventBridge, Lambda, and API Gateway. Improved throughput, reduced operational load, and established clear service boundaries for long‑term maintainability.',
-      technologies: [
-        'AWS Lambda',
-        'EventBridge',
-        'API Gateway',
-        'RDS',
-        'Node.js',
-        'TypeScript'
-      ],
-      demoUrl: null,
-      githubUrl: null
-    },
-    {
-      title: 'Oncology Research Data Platform',
-      description:
-        'Engineered backend systems powering secure, compliant data exchange for cancer research organizations. Designed REST APIs and workflow automation supporting multi‑institution data sharing. Improved reliability and observability across pipelines handling sensitive clinical and genomic datasets.',
-      technologies: [
-        'Node.js',
-        'TypeScript',
-        'AWS Cloud',
-        'REST APIs',
-        'Data Compliance'
-      ],
-      demoUrl: null,
-      githubUrl: null
-    },
-    {
-      title: 'Legacy System Modernization & AWS Migration',
-      description:
-        'Led the migration of legacy, tightly coupled data systems into modern AWS‑based pipelines. Re‑architected brittle ETL processes into modular, event‑driven workflows. Improved uptime, reduced latency, and significantly lowered operational overhead while enabling future scalability.',
-      technologies: ['AWS EC2', 'Lambda', 'C#', '.NET', 'Migration Strategy'],
-      demoUrl: null,
-      githubUrl: null
-    },
-    {
-      title: 'API Gateway Integration & Secure Device Communication',
-      description:
-        'Implemented secure API Gateway patterns enabling device‑to‑cloud communication across distributed environments. Built integration layers connecting multiple data systems, ensuring reliable message delivery, authentication, and workflow orchestration.',
-      technologies: ['API Gateway', 'IoT Integrations', 'Security', 'Express', 'NestJS'],
-      demoUrl: null,
-      githubUrl: null
-    },
-    {
-      title: 'Enterprise Microservices Architecture',
-      description:
-        'Designed and maintained microservice architectures across multiple organizations. Established service boundaries, standardized API contracts, and built operational tooling to improve reliability and developer velocity. Delivered services in both Node.js and .NET ecosystems to balance performance and delivery speed.',
-      technologies: ['Microservices', 'Node.js', 'TypeScript', 'C#', '.NET', 'Docker'],
-      demoUrl: null,
-      githubUrl: null
-    },
-    {
-  title: 'Claude Dev Skills — Plugin Marketplace',
-  description:
-    'Built a private Claude Code plugin marketplace that packages senior-level development workflows as installable skills. Split language-specific and shared tooling into focused plugins (TypeScript, Python, AWS, shared), including Jest/Vitest test generation, cross-language documentation, PR quality gates, pytest coverage workflows, and an IAM least-privilege reviewer for JSON/YAML, CloudFormation/SAM, and Terraform. Designed for real repo conventions, iterative verification, and portfolio-ready cloud/backend practice.',
-  technologies: [
-    'Claude Code',
-    'Node.js',
-    'TypeScript',
-    'Python',
-    'AWS IAM',
-    'Terraform',
-    'GitHub Actions'
-  ],
-  demoUrl: null,
-  githubUrl: 'https://github.com/jpelloni/claude-dev-skills'
-    },
-{
-  "title": "Developer Onboarding Automation CLI",
-  "description": "Built a modular TypeScript CLI (dev-setup) to standardize developer onboarding by automating environment setup and dependency validation. Designed a layered commands → services → adapters architecture that keeps external systems isolated, plus a build-time code generator that registers commands through static imports so they bundle cleanly into standalone Windows, macOS, and Linux binaries with Deno. Enforced quality through a GitHub Actions PR policy requiring passing tests, at least 80% coverage on changed files, JSDoc on every changed export, and up-to-date documentation. In progress: environment variable sync against .env.example and project scaffolding commands.",
-  "technologies": [
-    "TypeScript",
-    "Node.js",
-    "Commander.js",
-    "Deno",
-    "Jest",
-    "GitHub Actions",
-    "Docker"
-  ],
-  "demoUrl": null,
-  "githubUrl": "https://github.com/jpelloni/Developer-Onboarding-Automation-Tool"
-}
-  ];
-
   return (
     <>
 
@@ -125,7 +39,7 @@ const ProjectsPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 {projects.map((project, index) => (
                   <motion.div
-                    key={index}
+                    key={project.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
