@@ -29,13 +29,7 @@
   {
     "title": "Legacy System Modernization & AWS Migration",
     "description": "Led the migration of legacy, tightly coupled data systems into modern AWS‑based pipelines. Re‑architected brittle ETL processes into modular, event‑driven workflows. Improved uptime, reduced latency, and significantly lowered operational overhead while enabling future scalability.",
-    "technologies": [
-      "AWS EC2",
-      "Lambda",
-      "C#",
-      ".NET",
-      "Migration Strategy"
-    ],
+    "technologies": ["AWS EC2", "Lambda", "C#", ".NET", "Migration Strategy"],
     "demoUrl": null,
     "githubUrl": null
   },
@@ -67,24 +61,24 @@
     "githubUrl": null
   },
   {
-  "title": "Claude Dev Skills — Plugin Marketplace",
-  "description":
-    "Built a private Claude Code plugin marketplace that packages senior-level development workflows as installable skills. Split language-specific and shared tooling into focused plugins (TypeScript, Python, AWS, shared), including Jest/Vitest test generation, cross-language documentation, PR quality gates, pytest coverage workflows, a Python PR policy for docstrings and line and branch coverage, an IAM least-privilege reviewer for JSON/YAML, CloudFormation/SAM, and Terraform, a Terraform security reviewer for public exposure, encryption, backups, and plaintext secrets, and a GitHub Actions reviewer for untrusted pull requests, token permissions, and unpinned actions. Designed for real repo conventions, iterative verification, and portfolio-ready cloud/backend practice.",
-  "technologies": [
-    "Claude Code",
-    "Node.js",
-    "TypeScript",
-    "Python",
-    "AWS IAM",
-    "Terraform",
-    "GitHub Actions"
-  ],
-  "demoUrl": null,
-  "githubUrl": "https://github.com/jpelloni/claude-dev-skills"
-},
+    "title": "Claude Dev Skills — Plugin Marketplace",
+    "description": "Built a private Claude Code plugin marketplace that packages development workflows as installable skills. Split the tools into TypeScript, Python, AWS, and shared plugins: Jest and pytest generation, pull-request quality gates, JSDoc and docstring documentation, GitHub Actions review, IAM least-privilege and Terraform security review, and API contract, database-migration, and dependency reviews. Skills follow each repository's conventions, verify the result, and change files only when asked.",
+    "technologies": [
+      "Claude Code",
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "OpenAPI",
+      "AWS IAM",
+      "Terraform",
+      "GitHub Actions"
+    ],
+    "demoUrl": null,
+    "githubUrl": "https://github.com/jpelloni/claude-dev-skills"
+  },
   {
   "title": "Developer Onboarding Automation CLI",
-  "description": "Built a modular TypeScript CLI (dev-setup) to standardize developer onboarding by reporting whether Node.js, pnpm, and Docker meet minimum versions (with per-tool --require/--skip flags for CI), generating .env files from .env.example without overwriting existing ones, reporting missing or unused environment variables with a CI-friendly exit code, and scaffolding new TypeScript projects from an editable template embedded into the binary at build time. Designed a layered commands → services → adapters architecture that keeps external systems isolated, plus a build-time code generator that registers commands through static imports so they bundle cleanly into standalone Windows, macOS, and Linux binaries with Deno. Enforced quality through a GitHub Actions PR policy requiring passing tests, at least 80% coverage on changed files, JSDoc on every changed export, and up-to-date documentation. In progress: installing missing dependencies and starting the dev environment from dev-setup init.",
+  "description": "Built a modular TypeScript CLI (dev-setup) to standardize developer onboarding with a single init command that composes the other checks, installs project dependencies with pnpm, starts the project's devcontainer or Docker Compose services, and runs the project's lint and test scripts, reporting whether Node.js, pnpm, and Docker meet minimum versions (with per-tool --require/--skip flags for CI), generating .env files from .env.example without overwriting existing ones, reporting missing or unused environment variables with a CI-friendly exit code, and scaffolding new TypeScript projects from an editable template embedded into the binary at build time. Designed a layered commands → services → adapters architecture that keeps external systems isolated, plus a build-time code generator that registers commands through static imports so they bundle cleanly into standalone Windows, macOS, and Linux binaries with Deno. Enforced quality through a GitHub Actions PR policy requiring passing tests, at least 80% coverage on changed files, JSDoc on every changed export, and up-to-date documentation. In progress: optional secrets-manager integration for environment variables.",
   "technologies": [
     "TypeScript",
     "Node.js",
@@ -92,9 +86,11 @@
     "Deno",
     "Jest",
     "GitHub Actions",
-    "Docker"
+    "Docker",
+    "Dev Containers"
   ],
   "demoUrl": null,
   "githubUrl": "https://github.com/jpelloni/Developer-Onboarding-Automation-Tool"
 }
+
 ]
